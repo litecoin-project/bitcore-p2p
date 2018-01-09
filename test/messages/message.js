@@ -3,7 +3,7 @@
 var should = require('chai').should();
 var P2P = require('../../');
 var Message = P2P.Messages.Message;
-var Networks = require('litecore-lib').Networks;
+var Networks = require('viacore-lib').Networks;
 
 describe('Message', function() {
 
@@ -31,7 +31,7 @@ describe('Message', function() {
         return new Buffer(0);
       };
       var buffer = message.toBuffer();
-      var expectedBuffer = new Buffer('fbc0b6db636f6d6d616e640000000000000000005df6e0e2', 'hex');
+      var expectedBuffer = new Buffer('0f68c6cb636f6d6d616e640000000000000000005df6e0e2', 'hex');
       buffer.should.deep.equal(expectedBuffer);
     });
   });

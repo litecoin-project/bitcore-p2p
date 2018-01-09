@@ -1,4 +1,4 @@
-var litecore = require('litecore-lib');
-litecore.P2P = require('./lib');
+var viacore = require('viacore-lib');
+viacore.P2P = require('./lib');
 
-module.exports = litecore.P2P;
+module.exports = viacore.P2P;
