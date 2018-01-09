@@ -7,7 +7,7 @@ var Buffers = require('buffers');
 var P2P = require('../../');
 var Messages = P2P.Messages;
 var messages = new Messages();
-var bitcore = require('litecore-lib');
+var bitcore = require('viacore-lib');
 var Data = require('../data/messages'); //todo merge with commandData
 var commandData = require('../data/messages.json');
 
@@ -163,7 +163,7 @@ describe('Messages', function() {
 
   describe('#parseBuffer', function() {
     it('fails with invalid command', function() {
-      var invalidCommand = 'fbc0b6db6d616c6963696f757300000025000000bd5e830c' +
+      var invalidCommand = '0f68c6cb6d616c6963696f757300000025000000bd5e830c' +
         '0102000000ec3995c1bf7269ff728818a65e53af00cbbee6b6eca8ac9ce7bc79d87' +
         '7041ed8';
       var fails = function() {
@@ -178,10 +178,10 @@ describe('Messages', function() {
         '1000100000000000000ba6288540000000001000000000000000000000000000000' +
         '0000ffffba8886dceab0010000000000000000000000000000000000ffff0509552' +
         '2208de7e1c1ef80a1cea70f2f5361746f7368693a302e392e312fa317050001';
-      var malformed2 = 'fbc0b6db67657464617461000000000089000000d88134740102' +
+      var malformed2 = '0f68c6cb67657464617461000000000089000000d88134740102' +
         '0000006308e4a380c949dbad182747b0f7b6a89e874328ca41f37287f74a81b8f84' +
         '86d';
-      var malformed3 = 'fbc0b6db67657464617461000000000025000000616263640102' +
+      var malformed3 = '0f68c6cb67657464617461000000000025000000616263640102' +
         '00000069ebcbc34a4f9890da9aea0f773beba883a9afb1ab9ad7647dd4a1cd346c3' +
         '728';
       [malformed1, malformed2, malformed3].forEach(function(malformed) {

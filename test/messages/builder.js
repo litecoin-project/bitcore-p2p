@@ -3,7 +3,7 @@
 var should = require('chai').should();
 var P2P = require('../../');
 var builder = P2P.Messages.builder;
-var bitcore = require('litecore-lib');
+var bitcore = require('viacore-lib');
 
 describe('Messages Builder', function() {
 
